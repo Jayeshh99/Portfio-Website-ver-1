@@ -2,28 +2,33 @@
 // <weight>: Use a value from 300 to 700
 
 body {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+    font-family: system-ui;
+    /* margin: 0; */
+    padding: 0.5em;
+    color: #610505;
+    background-color: #f9efd4;
+    unicode-bidi: isolate;
 }
 
 header {
-    flex-grow: inherit;
-    scroll-snap-type: proximity;
     background-color: hsl(45, 88%, 53%);
-    color: white;
+    color: #fff8f8;
+    padding: 0.2em;
     text-align: center;
-    padding: 1em 0;
+    unicode-bidi: isolate;
+    margin-block: initial;
+    background-size: cover;
 }
 
 header h1 {
-    margin: 0;
+    margin: 0.2em;
+    font-size: 4.5em;
+    font-style: normal;
+    font-variant: petite-caps;
+}
+
+h1 {
+    flex-shrink: inherit;
 }
 
 header p {
@@ -31,18 +36,34 @@ header p {
     font-size: 1.2em;
 }
 
-nav {
-    margin: 1em 0;
+nav ul {
+    list-style: none;
+    padding: -2px;
+    margin: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: hsl(0deg 0% 0%);
+    color: #894141;
+    border-block-color: initial;
+    border-block-end-color: revert-layer;
+    border-block-style: inherit;
+}
+
+nav li {
+    margin: 0 1em;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 1em;
+    font-weight: 600;
 }
 
 main {
     padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 section {
@@ -51,6 +72,9 @@ section {
 
 h2 {
     color: hsl(45, 88%, 53%);
+    border-bottom: 2px solid hsl(45, 88%, 53%);
+    /* padding-bottom: 0em; */
+    /* margin-bottom: 0em; */
 }
 
 .job,
@@ -68,7 +92,7 @@ ul {
 }
 
 ul li {
-    background-color: #f1f1f1;
+    background-color: #b400ff0a;
     margin: 0.5em 0;
     padding: 0.5em;
     border-radius: 4px;
@@ -78,14 +102,10 @@ footer {
     background-color: hsl(45, 88%, 53%);
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 0.5em;
 }
 
 footer a {
     color: white;
-    text-decoration: none;
-}
+    text-decoration: none
 
-footer p {
-    margin: 0.5em 0;
-}
